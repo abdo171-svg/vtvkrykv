@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر إلكتروني</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">متجري</a>
+        <div class="ml-auto">
+            <span class="badge badge-secondary" id="cart-count">0</span> items in cart
+            <button class="btn btn-primary ml-2" data-toggle="modal" data-target="#checkoutModal">إتمام الشراء</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero bg-primary text-white text-center py-5">
+        <h1>مرحبا بكم في متجرنا</h1>
+        <p>استمتع بتجربة تسوق فريدة</p>
+    </header>
+
+    <!-- Products Section -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="" class="card-img-top" alt="منتج 1">
+                    <div class="card-body">
+                        <h5 class="card-title">منتج 1</h5>
+                        <p class="card-text">تفاصيل المنتج.</p>
+                        <button class="btn btn-primary add-to-cart" data-product="Product 1" data-price="100">أضف إلى السلة</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="" class="card-img-top" alt="منتج 2">
+                    <div class="card-body">
+                        <h5 class="card-title">منتج 2</h5>
+                        <p class="card-text">تفاصيل المنتج.</p>
+                        <button class="btn btn-primary add-to-cart" data-product="Product 2" data-price="200">أضف إلى السلة</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="" class="card-img-top" alt="منتج 3">
+                    <div class="card-body">
+                        <h5 class="card-title">منتج 3</h5>
+                        <p class="card-text">تفاصيل المنتج.</p>
+                        <button class="btn btn-primary add-to-cart" data-product="Product 3" data-price="300">أضف إلى السلة</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal fade" id="checkoutModal" tabindex="-1" role="dialog" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="checkoutModalLabel">إتمام الشراء</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h6>إجمالي السعر: <span id="total-price">0</span> ريال</h6>
+                    <div id="payment-request-button"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-4">
+        <p>&copy; 2024 متجر إلكتروني. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="script.js"></script>
+</body>
+</html>
